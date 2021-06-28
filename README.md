@@ -5,22 +5,14 @@
 >There are no service installers at this time in development.
 
 ## Prequisites
->Microsoft .NET Core 3.1
-
-https://dotnet.microsoft.com/download/dotnet/3.1
-
->Our modifyed registry file. (Place this at the root of the C:\ drive)
-
-https://project-winpass11.github.io/CPU/CPU.reg
+* [Microsoft .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet/3.1)
+* Our modifyed [registry file](https://project-winpass11.github.io/CPU/CPU.reg). (Place this at the root of the C:\ drive)
 
 ## Installation
->Download the latest release from https://github.com/project-winpass11/WinPass11.WinService/releases/ .
-
->Unzip the `netcoreapp3.1.rar` file and open it in file explorer.
-
->Open a command prompt **as administrator** and change into the directory named `netcoreapp3.1`. This is most likely in downloads.
-
->Run `.\WinPass11.WinService.exe install start`
+* Download the [latest release](https://github.com/project-winpass11/WinPass11.WinService/releases).
+* Unzip the `netcoreapp3.1.rar` file in file explorer.
+* Open a command prompt **as administrator** and change into the directory named `netcoreapp3.1`. This is most likely in downloads.
+* In the administrator command promt, run `.\WinPass11.WinService.exe install start`
 
 ## Did it work?
 Open About this PC in settings. If your processor is listed as an Intel Core i7 (and it wasn't previously), then congrats! It's worked! 🎂
