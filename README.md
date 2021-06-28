@@ -4,7 +4,7 @@
 
 >There are no service installers at this time in development.
 
-## Prequisites
+## Prerequisites
 * [Microsoft .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet/3.1)
 * Our modifyed [registry file](https://project-winpass11.github.io/CPU/CPU.reg). (Place this at the root of the C:\ drive)
 
