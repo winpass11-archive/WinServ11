@@ -11,7 +11,7 @@ namespace WinPass11.WinService
 
         public RegeditProcess()
         {
-            _process = Process.Start("regedit.exe", "/s C:\\CPU.reg");
+            _process = Process.Start("regedit.exe", "/s C:\\CPU.reg"); // Location of the modified registry file
         }
 
         public void Start()
@@ -27,22 +27,22 @@ namespace WinPass11.WinService
     {
         public static void Main()
         {
-            var rc = HostFactory.Run(x =>                                   //1
+            var rc = HostFactory.Run(x =>
             {
-                x.Service<RegeditProcess>(s =>                                   //2
+                x.Service<RegeditProcess>(s =>
                 {
-                    s.ConstructUsing(name => new RegeditProcess());                //3
-                    s.WhenStarted(tc => tc.Start());                         //4
-                    s.WhenStopped(tc => tc.Stop());                          //5
+                    s.ConstructUsing(name => new RegeditProcess());
+                    s.WhenStarted(tc => tc.Start());
+                    s.WhenStopped(tc => tc.Stop());
                 });
-                x.RunAsLocalSystem();                                       //6
+                x.RunAsLocalSystem();
 
-                x.SetDescription("Sample Topshelf Host");                   //7
-                x.SetDisplayName("WinPass11");                                  //8
-                x.SetServiceName("WinPass11");                                  //9
-            });                                                             //10
+                x.SetDescription("A tool for loading keys into the registry on startup");
+                x.SetDisplayName("WinPass11");
+                x.SetServiceName("WinPass11");
+            });
 
-            var exitCode = (int)Convert.ChangeType(rc, rc.GetTypeCode());  //11
+            var exitCode = (int)Convert.ChangeType(rc, rc.GetTypeCode());
             Environment.ExitCode = exitCode;
         }
     }
