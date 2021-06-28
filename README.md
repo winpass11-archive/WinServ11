@@ -11,7 +11,7 @@ https://dotnet.microsoft.com/download/dotnet/3.1
 
 >Our modifyed registry file. (Place this at the root of the C:\ drive)
 
-https://github.com/project-winpass11/project-winpass11.github.io/blob/main/CPU/CPU.reg
+https://project-winpass11.github.io/CPU/CPU.reg
 
 ## Installation
 >Download the latest release from https://github.com/project-winpass11/WinPass11.WinService/releases/ .
