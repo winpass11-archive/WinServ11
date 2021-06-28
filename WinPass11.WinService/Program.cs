@@ -5,19 +5,22 @@ using Topshelf;
 
 namespace WinPass11.WinService
 {
-    public class TownCrier
+    public class RegeditProcess
     {
-        readonly Timer _timer;
+        readonly Process _process;
 
-        public TownCrier()
+        public RegeditProcess()
         {
-            _timer = new Timer(1000) { AutoReset = true };
-            _timer.Elapsed += (sender, eventArgs) => Console.WriteLine("It is {0} and all is well", DateTime.Now);
+            _process = Process.Start("regedit.exe", "/s C:\\CPU.reg");
         }
-        public void Start() { _timer.Start(); Process regeditProcess = Process.Start("regedit.exe", "/s C:\\CPU_devicemgmt.reg");
-            regeditProcess.WaitForExit();
+
+        public void Start()
+        {
+            _process.WaitForExit();
         }
-        public void Stop() { _timer.Stop(); }
+        public void Stop()
+        {
+        }
     }
 
     public class Program
@@ -26,9 +29,9 @@ namespace WinPass11.WinService
         {
             var rc = HostFactory.Run(x =>                                   //1
             {
-                x.Service<TownCrier>(s =>                                   //2
+                x.Service<RegeditProcess>(s =>                                   //2
                 {
-                    s.ConstructUsing(name => new TownCrier());                //3
+                    s.ConstructUsing(name => new RegeditProcess());                //3
                     s.WhenStarted(tc => tc.Start());                         //4
                     s.WhenStopped(tc => tc.Stop());                          //5
                 });
