@@ -2,7 +2,7 @@
 Due to the person writing this only using C# for 2 days (no joke), the code probably sucks, so make it good.
 
 ## Prerequisites
-* Make sure you have a GitHub account.
+* Make sure you have a [GitHub account](https://github.com/join).
 * Fork the repository on GitHub.
 
 ## Making Changes
@@ -13,8 +13,6 @@ Due to the person writing this only using C# for 2 days (no joke), the code prob
 >To quickly create a topic branch based on master, `run git checkout -b fix/master/my_contribution master`.
 
 >Avoid working directly on the master branch.
-
->Make commits of logical and atomic units.
 
 >Check for unnecessary whitespace with `git diff --check` before committing.
 
