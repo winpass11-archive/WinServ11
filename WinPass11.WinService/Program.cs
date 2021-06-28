@@ -11,7 +11,7 @@ namespace WinPass11.WinService
 
         public RegeditProcess()
         {
-            _process = Process.Start("regedit.exe", "/s C:\\CPU.reg");
+            _process = Process.Start("regedit.exe", "/s C:\\CPU.reg"); // Location of the modified registry file
         }
 
         public void Start()
@@ -37,7 +37,7 @@ namespace WinPass11.WinService
                 });
                 x.RunAsLocalSystem();
 
-                x.SetDescription("Sample Topshelf Host");
+                x.SetDescription("A tool for loading keys into the registry on startup");
                 x.SetDisplayName("WinPass11");
                 x.SetServiceName("WinPass11");
             });
