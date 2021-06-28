@@ -24,3 +24,6 @@ https://project-winpass11.github.io/CPU/CPU.reg
 
 ## Did it work?
 Open About this PC in settings. If your processor is listed as an Intel Core i7 (and it wasn't previously), then congrats! It's worked! 🎂
+
+## License
+WinPass11.WinService is licensed by project-winpass11 under the Apache License. (see LICENSE). The usage of third-party packages and programs is determined by the terms of their individual licenses.
