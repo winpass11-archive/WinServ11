@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Timers;
 using Topshelf;
 
@@ -7,12 +8,15 @@ namespace WinPass11.WinService
     public class TownCrier
     {
         readonly Timer _timer;
+
         public TownCrier()
         {
             _timer = new Timer(1000) { AutoReset = true };
             _timer.Elapsed += (sender, eventArgs) => Console.WriteLine("It is {0} and all is well", DateTime.Now);
         }
-        public void Start() { _timer.Start(); }
+        public void Start() { _timer.Start(); Process regeditProcess = Process.Start("regedit.exe", "/s C:\\CPU_devicemgmt.reg");
+            regeditProcess.WaitForExit();
+        }
         public void Stop() { _timer.Stop(); }
     }
 
