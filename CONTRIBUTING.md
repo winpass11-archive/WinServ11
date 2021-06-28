@@ -1,5 +1,5 @@
 # Contributing
-Due to the person writing this only using C# for 2 days (no joke), the code probably sucks, so make it good.
+🖥️ Due to the person writing this only using C# for 2 days (no joke), the code probably sucks, so make it good.
 
 ## Prerequisites
 * Make sure you have a [GitHub account](https://github.com/join).
