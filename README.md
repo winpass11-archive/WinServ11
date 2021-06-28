@@ -17,5 +17,10 @@
 ## Did it work?
 Open About this PC in settings. If your processor is listed as an Intel Core i7 (and it wasn't previously), then congrats! It's worked! 🎂
 
+## Contributing
+When your machine is ready for development, take a look at CONTRIBUTING.md to see how to get your changes merged in.
+
+For more complete docs on developing with Puppet, take a look at the rest of the developer documents.
+
 ## License
 WinPass11.WinService is licensed by project-winpass11 under the Apache License. (see LICENSE). The usage of third-party packages and programs is determined by the terms of their individual licenses.
