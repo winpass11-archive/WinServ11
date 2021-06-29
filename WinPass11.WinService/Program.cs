@@ -11,7 +11,7 @@ namespace WinPass11.WinService
 
         public RegeditProcess()
         {
-            _process = Process.Start("regedit.exe", "/s C:\\CPU.reg"); // Location of the modified registry file
+            _process = Process.Start("regedit.exe", "/s C:\\regtweaks.reg"); // Location of the modified registry file
         }
 
         public void Start()
